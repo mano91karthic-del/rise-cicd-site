@@ -1,20 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>RISE CI/CD Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Coffee - Your Local Brew Spot</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header & Nav */
+        header { background: #2c3e50; color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav ul { list-style: none; display: flex; justify-content: center; }
+        nav li { margin: 0 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #3498db; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover; height: 100vh; display: flex; align-items: center; text-align: center; color: white; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+        .btn { background: #e74c3c; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; }
+        .btn:hover { background: #c0392b; }
+        
+        /* Sections */
+        section { padding: 80px 0; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2c3e50; }
+        
+        /* Services */
+        .services { background: #f8f9fa; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service { text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .service img { width: 80px; height: 80px; margin-bottom: 1rem; }
+        
+        /* About */
+        .about { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about img { width: 100%; border-radius: 10px; }
+        
+        /* Testimonials */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial { background: #3498db; color: white; padding: 2rem; border-radius: 10px; text-align: center; }
+        
+        /* Contact */
+        .contact { background: #2c3e50; color: white; }
+        form { max-width: 600px; margin: 0 auto; }
+        input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; border: none; border-radius: 5px; }
+        button { background: #e74c3c; color: white; padding: 1rem 2rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1rem; }
+        
+        /* Footer */
+        footer { background: #1a252f; color: white; text-align: center; padding: 2rem 0; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .about { grid-template-columns: 1fr; }
+            nav ul { flex-direction: column; }
+        }
+    </style>
 </head>
 <body>
-  
-  
-  <h1>RISE Internship – CI/CD Demo</h1>
-  <h2>Manoj karthikyean S</h2>
-  <h3>Project 6: Build CI/CD Pipeline with GitHub Actions</h3>
-  <p>This website is deployed automatically to GitHub Pages whenever I push changes to the main branch.</p>
-  <ul>
-    <li>Source code hosted on GitHub.</li>
-    <li>GitHub Actions workflow builds and deploys on each push.</li>
-    <li>Hosting target: GitHub Pages.</li>
-  </ul>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to Cozy Coffee</h1>
+            <p>Premium brews and cozy vibes for your daily grind.</p>
+            <a href="#contact" class="btn">Visit Us Today</a>
+        </div>
+    </section>
+    
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <img src="https://images.unsplash.com/photo-1512568400610-62da28bc9a12?ixlib=rb-4.0.3&w=100&h=100&fit=crop" alt="Espresso">
+                    <h3>Fresh Espresso</h3>
+                    <p>Hand-roasted beans brewed to perfection daily.</p>
+                </div>
+                <div class="service">
+                    <img src="https://images.unsplash.com/photo-1517959108652-7eb37bb11395?ixlib=rb-4.0.3&w=100&h=100&fit=crop" alt="Pastries">
+                    <h3>Artisan Pastries</h3>
+                    <p>Baked fresh with local ingredients.</p>
+                </div>
+                <div class="service">
+                    <img src="https://images.unsplash.com/photo-1577968897966-499bf170cfed?ixlib=rb-4.0.3&w=100&h=100&fit=crop" alt="WiFi">
+                    <h3>Free WiFi & Space</h3>
+                    <p>Work or relax in our cozy atmosphere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about">
+                <div>
+                    <h2>About Our Shop</h2>
+                    <p>Family-owned since 2010, Cozy Coffee serves the best organic blends in town. We source beans from sustainable farms and create a welcoming space for all.</p>
+                    <p>Join our community of coffee lovers—over 5,000 happy customers!</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Coffee Shop Interior">
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Best latte in town! Super friendly staff."</p>
+                    <h4>- Sarah K.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Cozy spot for working remotely. Love it!"</p>
+                    <h4>- Mike R.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Fresh pastries every day. Highly recommend."</p>
+                    <h4>- Priya S.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cozy Coffee. All rights reserved. | Chennai, India</p>
+        </div>
+    </footer>
 </body>
 </html>
