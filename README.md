@@ -3,12 +3,6 @@
 A modern, single-page café website built as a portfolio-grade project and a fake-but-believable startup MVP.
 Designed to demonstrate frontend engineering, product thinking, and CI/CD readiness — without using heavy frameworks.
 
-🚀 Live Demo
-
-(Add your deployed URL here after CI/CD)
-
-https://your-username.github.io/cozy-coffee
-
 📌 Project Overview
 
 Cozy Coffee is a futuristic café website that simulates real-world business behavior using pure HTML, CSS, and JavaScript in a single file.
